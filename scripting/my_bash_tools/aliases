@@ -1,0 +1,7 @@
+alias lla="ls -la"
+
+
+alias vic="vim -p *.[ch]"
+
+alias gccq="gcc -std=c99 *.[ch]"
+alias gccq+="gcc -std=c99 *.[ch] && ./a.out"

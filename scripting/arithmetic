@@ -1,0 +1,28 @@
+Berechnungen
+
+1: EXPR
+expr 2 + 3 \* 2
+
+Man beachte erforderliche Leerzeichen und Escape für * () etc.
+
+2: $((...))
+echo $((4+5 * 3))
+
+Leerzeichen und Sonderzeichen egal. Version zwei ist nur eine andere 
+Schreibweise für Version 1. Zudem nicht kompatibel mit anderen Shells.
+
+3: LET
+
+let sum=$zahl1+$zahl2
+
+Hier keine Leerzeichen erlaubt.
+
+Alle Versionen 1-3 erlauben keine floating Point berechnungen.
+Dafür lässt sich das Programm bc mit der Option bc -l verwenden.
+
+echo "101 / 3"| bc
+33.66666
+
+bzw. 
+
+bc <<< "101 / 3"

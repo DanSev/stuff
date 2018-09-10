@@ -1,0 +1,16 @@
+AUFBAU:
+
+awk 'Kommando' Datei [Datei]
+
+awk 'Kommando
+Kommando
+Kommando' Datei [Datei]
+
+awk -f \pfad\kommando-datei Dati [Datei]
+
+KOMMANDO:
+
+Muster { Aktion } 
+
+awk ' $1 ~ "Franz" { print $3} '
+Wenn in Zeile 1 der String Franz steht, drucke Zeile 3

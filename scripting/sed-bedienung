@@ -1,0 +1,18 @@
+sed für search und search&replace sowohl in der Console
+als auch in vim der less(search)
+
+
+/Ausdruck/
+
+SEARCH and REPLACE
+
+s/Ausdruck/Replace/   ersetzt den ersten Treffer für "Ausdruck" mir "Replace"
+s/Ausdruck/Replace/g  ersetezt alle Treffer
+s/Ausdruck/Replace/gi case insensitive
+(Erstest Zeichen nach dem s ist der Delimiter. es ginge auch s|Ausdruck|Replace| oder s:Ausdruck:Replace:
+
+Reguläre ausdrücke, anders als bei awk, müssen fast immer mit \ escaped werden \( \+ \* etc.
+Dieses Verhalten kann mit der Option -r ausgeschaltet werden(Äquivalent zu -E bei grep) sed -r 's/Bla/Blub/'
+Mit Klammern können Subgruppe gematched werden die mit \1 \2 \3 etc wieder gedruckt werden können.
+
+echo Party.img Party2.img Party3.png Party4.xy.PNG |sed -r 's/(\.[^\.]+)/_backup\1/'

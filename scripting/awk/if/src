@@ -1,0 +1,9 @@
+#!/bin/awk -f
+
+BEGIN{
+}
+
+$0 ~ /^D/ { 	if($2 >= 10) print ">10";
+		 else print}
+		
+		

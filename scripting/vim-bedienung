@@ -1,0 +1,15 @@
+SPEZIAL INSERT MODE ANWENDUNGEN:
+1)
+Etwas an den Anfang jeder Zeile schreiben:
+ctrl + v (Spalten markieren)
+Shift + I (Spezial Insert Mode)
+Eingabe z.b #(auskommentieren)
+ESC drücken + kurz Warten.
+
+2)
+Linie mit 50 Bindestrichen einfügen:
+Normal Mode
+50 Eingeben
+Shift + I
+- Eingeben
+ESC drücken + kurz warten

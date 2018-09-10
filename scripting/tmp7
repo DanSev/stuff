@@ -1,0 +1,52 @@
+fehler()
+{
+echo fehler_function
+echo ---
+return 11
+}
+
+okay()
+{
+return 0
+}
+
+list()
+{
+echo 9
+echo 2
+echo 3
+}
+
+fehler
+
+echo '$?='$?
+
+
+okay
+
+
+echo '$?='$?
+
+
+fehler
+
+echo '$?='$?
+
+
+echo Moin $(fehler)
+
+
+set $(list)
+
+
+count=0
+
+for idx in $@
+do
+echo element $count : $idx
+#let count=$count+1
+count=$((count + 1))
+done
+
+
+echo 

@@ -1,0 +1,77 @@
+test, if, else, case
+
+
+IF:
+Wenn der Ausdruck Kommando zu 0 ausgewertet wird.
+
+if Kommando
+then
+	Anweisung1
+	Anweisung2
+	...
+fi
+
+
+
+TEST:
+Mit dem Programm test werden Bedingungen zu 1 oder zu 0 ausgewertet.
+
+test wird entweder aufgerufen über test ...
+oder über [ ]
+WICHTIG: Leerzeichen zwischen [ .. ]
+
+( 	test 11 = 11
+	echo $?
+	0
+
+	test 11 = 12
+	echo $?
+	1
+)
+
+
+(Bedingungen verUNDEN(-a) bzw. verODERN(-o) [ $1 = A -o $1 = B ]
+
+
+ELSE;ELIF:
+
+if Kommand
+then
+	Anweisung
+else
+	Anweisung
+fi
+
+if Kommand
+then
+	Anweisung
+elif Kommand
+then
+	Anweisung
+else
+	Anweisung
+fi
+
+
+CASE:
+
+case Variable in
+Pattern) Anweisung; Anweisung;;
+Pattern2) Anweisung;
+Pattern3) Anweisung;
+esac
+
+Pattern - es geht jeder String inkl Wildcard 
+
+case $Number in
+1);;
+2);;
+*);;
+esac
+
+case %VAR in
+[a-z]) echo ist Buchstabe;;
+[0-9]) echi ist Zahl;;
+-|.) echo ist Strich oder Punkt;;
+esac
+

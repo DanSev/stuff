@@ -1,0 +1,4 @@
+BASH:
+Auf diesem System können Einstellungen für die bash in
+der Datei ~/.bashrc gespeichert werden.
+Hier können z.B aliase oder Variablen vordeklarert werden.

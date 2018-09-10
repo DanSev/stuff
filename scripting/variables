@@ -1,0 +1,32 @@
+VAR=25    - erzeugt oder übschreibt die Variable Hallo mit dem Wert 25
+unset VAR   - macht die Variable VAR der Shell unbekannt.
+
+Ersetzen der Variable(nutzen) mit $Variable
+~ echo Hallo ich bin $VAR Jahre alt.  
+
+Häufig auch als ${Variable} aufgrund der Eindeutigkeit.
+~ echo Hallo ich bin ${VAR}m groß.
+
+
+${VAR:-25}
+Wenn war nicht existiert, wird der Wert 25 benutzt. VAR wird NICHT erzeugt.
+
+
+${VAR:=25}
+Wenn war nicht existiert, wird der Wert 25 benutzt und VAR erzeugt.
+
+${#VAR}
+Gibt die Anzahl der Zeichen in VAR zurück
+
+FEHLERBEHANDLUNG:
+
+${VAR:?Fehlermeldung}
+
+benutzt VAR wenn die Variable existiert. Wenn nicht wird das
+Script beendet und die Fehlermeldung zurückgegeben.
+
+VARIABLEN PER PROMP
+
+read -p "Bitte geben Sie Name und Alter ein: " NAME ALTER
+
+

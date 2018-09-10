@@ -1,0 +1,46 @@
+# Creates a directory and switches to it
+xd() {
+	mkdir $1 
+	cd $1
+}
+
+
+# Creates a file with bash script file with header and
+# set it to executable
+mksh()
+{
+cat > $1 << EOF
+#!/bin/bash
+# [dse] `date`
+
+EOF
+
+chmod +x $1
+vi $1
+}
+
+# Copy Files and change to target directory
+
+cpc() {
+cp "$@"
+for i in "$@"
+do
+	FOLDER=$i
+done
+
+cd $FOLDER	
+
+}
+
+# Move Files and change working directory 
+
+mvc() {
+mv "$@"
+for i in "$@"
+do
+	FOLDER=$i
+done
+
+cd $FOLDER	
+
+}

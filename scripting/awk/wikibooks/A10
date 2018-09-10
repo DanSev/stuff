@@ -1,0 +1,9 @@
+#!/bin/awk -f
+
+BEGIN{
+IxMin = 850
+IyMin = 35
+}
+
+$3 >= IxMin && $4 >= IyMin {print; exit;}
+

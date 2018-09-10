@@ -1,0 +1,21 @@
+# Dieses Script kann als Template aufgerufen werden
+# mit dem Optionen ./template1 i "Hallo Welt" und würde
+# dann entsprechend einen angepassten Text ausgeben.
+# 2. Aufrufoption in vim mit :r! /template i "Hallo"
+# Achtung: Bei der Variante mit dem Inline-Dokument (<< EOF...)
+# werden Variablen im Test ersetzt. Ist dies nicht gewollt,
+# müssen die Dollarzeichen escaped weren \$.
+# Würde das Template aus einem File gelesen, wäre dies nicht
+# der Fall.
+
+
+COUNTER=$1
+ECHO=$2
+
+sed -r -e "s/@COUNTER@/$COUNTER/g" -e "s/@ECHO@/$ECHO/g"  << EOF
+for(@COUNTER@=0; @COUNTER@<=10; @COUNTER@++)
+{
+	echo @ECHO@ \$@COUNTER@;
+}   
+EOF
+

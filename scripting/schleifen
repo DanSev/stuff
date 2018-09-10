@@ -1,0 +1,58 @@
+Kopfgesteuert while
+Listenscheife for
+
+
+WHILE:
+
+nutzt test vergleichbar if.
+Solange test zu 0 bzw. Wahr evaluiert, wird die Schleife durchlaufen.
+
+i=0
+while [ $i -le 10 ]
+do
+	echo $i
+	let i=$i+1
+done
+
+
+FOR:
+
+läuft über eine Liste von Werten. In dem Schleifendurchlauf hat die Variable
+den Wert des nächsten Elements in der Liste.
+
+for VAR in LIST
+do
+	echo $VAR
+done
+-------------------------------
+for VAR in Hans Peter Otto
+do
+	echo $VAR
+done
+------------------------------
+for VAR in *
+do
+	mv $VAR /new_location
+done
+-----------------------------
+for VAR in ´Command that returns a List´
+do
+	...
+done
+-------------------------------
+for VAR in $@
+do
+	#Alle Argumente $1 - $n
+done
+
+
+TIPP: Immer Anführungszeichen für die Argumente benutzen:
+
+for i in "$@"
+do
+echo "$i"
+done
+
+So bleiben Strings zusammen, die zusammen gehören.
+
+./Script Hallo Welt "wie gehts"

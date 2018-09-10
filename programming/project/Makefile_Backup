@@ -1,0 +1,2 @@
+prog: main.c mylib.c mylib.h
+	gcc -o prog main.c mylib.c

@@ -1,0 +1,13 @@
+summe()
+{
+	SUM=0
+	
+	for i in $@
+	do
+		let SUM=$SUM+$i
+	done
+	
+	echo $SUM
+}
+
+

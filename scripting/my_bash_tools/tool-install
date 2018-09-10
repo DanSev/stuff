@@ -1,0 +1,7 @@
+RPATH=`pwd`
+cd
+ln -s $RPATH/functions .functions
+ln -s $RPATH/aliases .aliases
+
+echo ". .functions" >> .bashrc
+echo ". .aliases" >> .bashrc

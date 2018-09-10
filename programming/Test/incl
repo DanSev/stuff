@@ -1,0 +1,14 @@
+#!/bin/bash
+# [dse] Mo 21. Mai 13:52:50 CEST 2018
+
+for i in "$@"
+do
+	case $i in 
+	stdio) echo "#include <stdio.h>\n"
+		;;
+	math)	echo "#include <math.h>\n"
+		;;
+	*)  ;;
+	esac
+done
+

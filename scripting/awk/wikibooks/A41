@@ -1,0 +1,10 @@
+#!/bin/awk -f
+
+
+{if (substr($1, 2) >=120){
+		if (substr($1, 2) <= 160){print;}
+		else{exit;}
+}}
+
+
+

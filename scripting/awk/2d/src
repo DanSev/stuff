@@ -1,0 +1,14 @@
+#!/bin/awk -f
+
+BEGIN{
+}
+
+/^\t/ || /^ /  {print "\n"}
+{print}
+
+
+
+
+
+END{
+}

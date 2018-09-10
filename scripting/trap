@@ -1,0 +1,32 @@
+# Mit trap kann auf Signale reagiert werden um z.B bei unvorhergesehenem
+# Abbruch z.B Ctrl+C noch aufgeräumt wird ..z.B temporäre files löschen.
+# Gute Praxis, reguläre und irreguläre Events getrennt .
+
+# trap "cmd1; cmd2 ..." Signal1 Signal2...
+# FÜR KILL, funktioniert das natürlich nicht
+
+# trap "echo regulär beendet" EXIT
+
+
+
+trap '{ echo "Hey, you pressed Ctrl-C.  Time to quit." ; exit 1; }' INT
+echo "Counting to 5 slowly, press Ctrl-C to interrupt."
+for number in 1 2 3 4 5; do
+    echo $number
+        sleep 1
+        done
+
+        trap '' INT
+        echo "Counting to 5 again, but pressing Ctrl-C shouldn't work."
+        for number in 1 2 3 4 5; do
+            echo $number
+                sleep 1
+                done
+
+                trap - INT
+                echo "One more time, but Ctrl-C should work again."
+                for number in 1 2 3 4 5; do
+                    echo $number
+                        sleep 1
+                        done
+                        exit 0

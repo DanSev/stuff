@@ -1,0 +1,7 @@
+#!/bin/awk -f
+
+BEGIN{
+
+}
+
+tmp != $1 {print; tmp = $1}

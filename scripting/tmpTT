@@ -1,0 +1,6 @@
+. functions.lib
+
+
+echo "Los geht's"
+summe 1 9 4 5
+

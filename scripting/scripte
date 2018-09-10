@@ -1,0 +1,29 @@
+Scriptparameter:
+
+
+$0 immer der Pfad des Scripts
+$1 erstes übergebenes Argument
+$2 zweites übergebenes Argument...
+
+$* Alle Argumente als Zeichenkette
+$@ Alle Argumente als Liste (Nicht $0)
+$# Anzahl der übergebenen Parameter.
+$$ PID der Shell(geht auch im Terminal)
+
+Die Übergabeparameter können anders als normale Variablen nicht einfach
+mit VAR=WERT überschrieben werden.
+Hierzu ist set zu verwenden.Set setzt jedoch alle Übergabeparameter - überschreibt also die vorherigen.
+
+SHIFT:
+mit shift werden alle Variablen um eins nach links geshiftet.
+$2 wird zu $1, $3 wird zu $2 usw. $# verringert sich jeweils um 1.
+
+
+Nach Beendigung des Script steht in der Variable $? eine
+0 oder eine andere Zahl.
+0  = Beendet ohne Fehler.
+!0 = Beendet mit Fehler.
+
+mit exit kann das script beendet werden.
+Eine Zahl kann übergeben werden exit 22.
+Die 22 kann dann via $? abgefragt werden.

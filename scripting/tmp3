@@ -1,0 +1,14 @@
+texty()
+{
+	if [ $1 = 23 ]
+	then
+		echo Hallo
+	else
+		echo Welt
+	fi
+}
+
+
+
+echo `texty $1`
+

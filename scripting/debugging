@@ -1,0 +1,11 @@
+set -x -> Am Anfang eines Scripts eingefügt, führt dazu das jede Zeile beim ausführen
+ausgegeben wird. Dabei sind Variablen substituiert.
+
+set -u -> Am Anfang eines Scripts eingefügt, führt dazu das die Benutzung von Variablen
+ohne Wert verboten ist. Das Script beendet in solchen Fällen mit einem Fehler.
+
+Global(Im Script die Ausgabe umlenken mit exec
+
+exec 1>/dev/null
+Funktion(Viel Ausgabe die mich nicht interessiert)
+exec 1>tty

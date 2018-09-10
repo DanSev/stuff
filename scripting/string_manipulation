@@ -1,0 +1,19 @@
+CUT:
+
+ermöglicht das ausschneiden aus textdatein.
+Jede Operation wird auf alle Zeilen angewand.
+Listen.
+
+cut "-d;" -f1
+
+Gibt Spalte eins aus dem File zurück (-f1,3 = Spalte 1 und 3)
+Spaltendelimiter ist ";" 
+
+
+cut -c1
+
+Gibt das erste Zeichen aus jeder Zeile aus
+
+cut -c5-
+
+Gibt alle Zeichen jeder Zeile ab dem 5ten Zeichen aus.

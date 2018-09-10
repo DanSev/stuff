@@ -1,0 +1,30 @@
+VERBOSE=0
+HELP=0
+
+while [ $# -gt 0 ]
+do
+
+case $1 in
+
+-v | --verbose) 	VERBOSE=1;
+			shift;;
+-h | --help)		HELP=1;
+			shift;;
+-o | --outfile)	shift;
+			if [ -e "$1" ]
+			then
+				OUTFILE=$1;
+				shift;
+			else
+				echo "Argument outfile expects an valid path";
+				exit 1;
+			fi;;
+*)			echo "Unknown Argument $1";
+			exit 1;;
+
+esac
+done
+echo "-v = $VERBOSE"
+echo "-h = $HELP"
+echo "Outfile is ${OUTFILE:-"not set"}"
+exit 0

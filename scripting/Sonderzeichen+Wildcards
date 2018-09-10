@@ -1,0 +1,43 @@
+mit \ wird das nächste Zeichen nicht als Sonderzeichen interpretiert
+
+AGE=25
+echo Hallo, ich bin \$AGE
+
+-> Hallo ich bin 25
+
+
+Alle Sondzeichen zwischen "" AUßER Variablen($) und Substituierung werden nicht interpretiert
+
+AGE=25
+echo "Hallo ich bin *$AGE*"
+
+-> Hallo ich bin *25*
+
+
+
+ALLE Sonderzeichen zwischen '' werden nicht interpretiert.
+
+AGE=25
+echo 'Hallo ich bin *$AGE*'
+
+-> Hallo ich bin *$AGE*
+
+
+Alles zwischen ` ` bzw $() wird in einer Subshell ausgeführt und durch die
+Rückgabe substituiert.
+
+echo Das Arbeitsverzeichnis ist $(pwd)
+echo Das Arbeitsverzeichnis ist `pwd`
+
+WILDCARDS:
+
+* jede Zeichenkette
+? ein beliebige Zeichen
+[] eines von den in den Klammern spezifizierten Zeichen
+[aA]  [a-z]  [a-z0-9]
+
+{} Oder-Muster: Vorsicht, keine Leerzeichen.
+datei_{original,backup}.{txt,jpg,tar}
+
+
+

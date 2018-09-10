@@ -1,0 +1,55 @@
+Umleitung stdout in Datei = cmd > datei
+> nutzt default-wert 1
+vollständiger wäre cmd 1> datei
+
+> datei erzeugt oder überschreibt datei. >> erzeugt oder hängt an.
+
+0 = stdin
+1 = stdout
+2 = stderr
+
+
+Umleitung von sowohl stdout als auch stderr
+cmd 2>&1 datei
+
+
+Pipe | übergibt output an da nächste kommando
+
+cmd1 | cmd2
+
+Man kann auch beide Kanäle zusammenlegen und weiterleiten.
+
+cmd 2>&1 | less
+
+Oder unterschiedlich behandeln.
+
+cmd 2> error.txt | less
+
+
+
+
+T-Stück
+
+Zum weiterleiten an nächstes kommando und gleichzeitigem abspeichern in eine datei.
+
+cmd1 |tee datei |cmd2
+
+soll die datei nicht überschrieben, sondern erweitert werden: Argument -a
+
+cmd1 |tee -a datei |cmd2
+
+Umleitung in Datei und Anzeige im Terminal
+
+cmd1 |tee datei
+
+Weitere:
+
+<<< Schreibt direkt auf den Standart-Input:
+bc <<< "12 * 3"
+
+
+cat << EOF
+> Hallo Welt
+> EOF
+Sagt dem Program welches Zeiche das letzte ist, welches es einlesen soll(hier EOF).
+Wenn das Zeichen kommt wird das Kommando ausgeführt

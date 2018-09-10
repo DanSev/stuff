@@ -1,0 +1,1 @@
+du  -sh <directory>: Disk Usage for a specific directory -s = only sum; -h = human readable

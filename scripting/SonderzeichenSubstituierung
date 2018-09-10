@@ -1,0 +1,35 @@
+mit \ wird das nächste Zeichen nicht als Sonderzeichen interpretiert
+
+AGE=25
+echo Hallo, ich bin \$AGE
+
+-> Hallo ich bin 25
+
+
+Alle Sonderzeichen zwischen "" AUßER Variablen($) werden nicht interpretiert
+
+AGE=25
+echo "Hallo ich bin *$AGE*"
+
+-> Hallo ich bin *25*
+
+
+
+ALLE Sonderzeichen zwiscehn '' werden nicht interpretiert.
+
+AGE=25
+echo 'Hallo ich bin *$AGE*'
+
+-> Hallo ich bin *$AGE*
+
+
+Alles zwischen ` ` bzw $() wird in einer Subshell ausgeführt und durch die
+Rückgabe substituiert.
+
+echo Das Arbeitsverzeichnis ist $(pwd)
+echo Das Arbeitsverzeichnis ist `pwd`
+
+
+
+
+

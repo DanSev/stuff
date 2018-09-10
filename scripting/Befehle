@@ -1,0 +1,3 @@
+whatis : gibt den NAME-Abschnitt der Man-Pages eines Kommandos aus (whatis ls)
+
+apropos: Durchsucht alle NAME-Abschnitte der Man-Pages nach einem Stichwort nd listet entsprechende Treffer auf (apropos copy)

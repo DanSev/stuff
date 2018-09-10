@@ -1,0 +1,8 @@
+#!/bin/awk -f
+
+BEGIN {
+print "bla"
+print "blub"
+}
+
+{print $1 "\t" $4}

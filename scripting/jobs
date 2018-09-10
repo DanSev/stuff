@@ -1,0 +1,33 @@
+jobs <- gibt alle jobs der shell zurück.
+
+normalerweise ~Programm <- startet ein Programm im Vordergrund(fg) und gibt die kontrolle
+über die shell an das Programm ab. Auf die Shell kann erst wieder zugegriffen werden, 
+wenn das Programm durchgelaufen ist.
+
+
+~ Programm & startet das Programm als Hintergrundprozess(bg)
+und gib eine job id zurück [1] 
+
+mit fg kann ein Hintergrundjb in den Vordergrund gebracht werden.
+
+mit Str+Z wird ein Vordergrundprozess angehalten (Keine Rechnezeit mehr)
+
+Mit ~bg job-id/job-name wird der angehaltene Prozess als Hintergrundprozess fortgeführt.
+
+
+Programme nacheinader ausführen:
+Programm1; Program2; Program3
+
+Programme parallel ausführen:
+Programm1 & Programm2 & Programm3
+
+Abhängiges ausführen:
+
+Programm1 && Programm2 
+Programm2 wird nach Programm1 ausgeführt, wenn Programm1 ohne Fehler beendet.
+
+Programm1 || Programm2
+Programm2 wird nach Programm1 ausgeführt, wenn Programm1 mit einem Fehler beendet.
+
+Rückgabewert eines Programs &?
+0 = kein Fehler, alles andere Fehler.

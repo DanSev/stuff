@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ $1 = true ]
+then
+	echo while
+	shift
+	
+	while [ $# -gt 0 ]
+	do
+		echo $1
+		shift
+	done
+else
+	echo for
+	shift
+	for i in $@
+	do
+
+		echo $i
+	done
+fi
+
+
+

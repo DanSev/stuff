@@ -1,0 +1,4 @@
+
+toupper()
+tolower()
+length() #Zählt das \n  mit wenn eine ganze Zeile length($0) untersucht wird

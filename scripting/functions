@@ -1,0 +1,35 @@
+FUNKTIONEN:
+
+function Funktionsname()
+{
+	Anweisung
+	Anweisung
+}
+
+Den Bezeichner function kann man auch einfach weglassen.
+
+Der Funktion können Parameter wie einem Script übergeben werden.
+Innerhalb der Funktion dann über $1 $2 usw. zu verwenden.
+die globalen $1, $2 usw sind innerhalb der Funktion ungültig. Nur $0 enthält
+weiterhin den Script-Pfad.
+
+
+RÜCKGABEWERTE:
+Eine Funktion kann mit return beendet werden.
+mit return 22 kann eine Zahl übergeben werden die dann mit $? abgefragt werden kann.
+
+Andere Rückgabewerte lassen sich via echo und Kommando/Funktionssubstitution ` ` bzw $()
+realisieren.
+
+
+
+EXPORT IMPORT:
+
+Mit export -f function_name
+lassen sich Funktionen exportieren.
+
+Funktionen können auch aus einem File eingeladen/importiert werden)
+Im selben Ordner: Punkt Filename.
+
+. Funktions.lib
+

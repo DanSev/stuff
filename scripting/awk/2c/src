@@ -1,0 +1,10 @@
+#!/bin/awk -f
+
+BEGIN{
+}
+
+$1 == "mul" {print ($2*$3)}
+
+
+END{
+}

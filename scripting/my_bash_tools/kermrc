@@ -1,0 +1,6 @@
+set line /dev/ttyUSB0
+set flow-control none
+set speed 115200
+set parity none
+set carrier-watch off
+echo Startscript done

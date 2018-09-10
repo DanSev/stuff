@@ -1,0 +1,66 @@
+jobs <- gibt alle jobs der shell zurück.
+
+normalerweise ~Programm <- startet ein Programm im Vordergrund(fg) und gibt die kontrolle
+über die shell an das Programm ab. Auf die Shell kann erst wieder zugegriffen werden, 
+wenn das Programm durchgelaufen ist.
+
+
+~ Programm & startet das Programm als Hintergrundprozess(bg)
+und gib eine job id zurück [1] (laufende Nummer, nicht zu verwechseln mit PID)
+
+mit fg %1 kann der Hintergrundjob [1] in den Vordergrund gebracht werden.
+
+mit Str+Z wird ein Vordergrundprozess angehalten (Keine Rechnezeit mehr)
+
+Mit ~bg job-id/job-name wird der angehaltene Prozess als Hintergrundprozess fortgeführt.
+
+
+Programme nacheinader ausführen:
+Programm1; Program2; Program3
+
+Programme parallel ausführen:
+Programm1 & Programm2 & Programm3
+
+Abhängiges ausführen:
+
+Programm1 && Programm2 
+Programm2 wird nach Programm1 ausgeführt, wenn Programm1 ohne Fehler beendet.
+
+Programm1 || Programm2
+Programm2 wird nach Programm1 ausgeführt, wenn Programm1 mit einem Fehler beendet.
+
+Rückgabewert eines Programs &?
+0 = kein Fehler, alles andere Fehler.
+
+4
+
+
+
+Prozesse:
+
+NICE
+nice -n 10 Programm/Kommando
+
+startet einen Prozess mit modifiziertem nice-Wert. -n 10 = Decrement um 10.
+Ne niedriger der Wert, desto geringer ist die Prozess-Priorität.
+Werte von 1-19 möglich.
+Priorität erhöhen nice -n -20 : meist nur admin
+
+RENICE
+
+renice -10 -p PID
+
+nachträgliches Verändern der Prozess-Priorität.
+
+KILL
+kill sendet Signale an ausgewählte Prozesse.
+Die Signale könne entweder über ihre Nummern oder ihren Namen angegeben werden.
+
+z.B. 	kill -TSTP 1234  hält den Prozess 1234 an (Entspricht Str+Z)
+	kill -9 1234 Beendet den Prozess 1234 ohne Kompromisse.
+
+
+ -9 = -KILL = System beendet Prozess.
+-15 = -TERM = Sagt Programm es möge sich sofort beenden.
+-18 = -TSTP = Hält Prozess an.
+      -CONT = Programm bekommt wieder Rechenzeit
